@@ -1,0 +1,17 @@
+<form method="POST" action="{% url view_url %}">
+    {% csrf_token %}
+    <div class="d-flex flex-column gap-3 mt-3 align-items-center">
+        <textarea name="code" class="form-control" rows="3" placeholder="{{ text_area_placeholder }}">{{ code }}</textarea>
+        <select name="language" class="form-select">
+            <option>Select the language</option>
+            {% for language_ in languages %}
+                {% if language == language_ %}
+                    <option selected value="{{ language_ }}">{{ language_ }}</option>
+                {% else %}
+                    <option value="{{ language_ }}">{{ language_ }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </div>
+</form>

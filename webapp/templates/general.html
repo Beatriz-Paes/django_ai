@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if response %}
+        {% with question=code response=response %}
+            {% include "responses.html" %}
+        {% endwith %}
+    {% else %}
+        {% with question="Curiosities of the universe" response="Apenas quatro planetas do Sistema Solar são telúricos, isto é, têm solo rochoso.<br>Os planetas rochosos do Sistema Solar são Mercúrio, Vênus, Terra e Marte.<br>Os demais planetas do sistema são formados exclusivamente por um grande amontoado de gases presos por uma grande interação gravitacional." %}
+            {% include "responses.html" %}
+        {% endwith %}
+    {% endif %}
+
+    <form method="POST" action="{% url 'general' %}">
+        {% csrf_token %}
+        <div class="d-flex flex-column gap-3 mt-3 align-items-center">
+            <textarea name="code" class="form-control" rows="3"
+                      placeholder="Type here the instruction :)">{{ code }}</textarea>
+            <button type="submit" class="col-2 btn btn-secondary">Submit</button>
+        </div>
+    </form>
+
+
+{% endblock %}

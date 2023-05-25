@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if response %}
+
+        <pre>
+<code class="line-numbers language-{{ language }}">
+{{ response }}
+</code>
+        </pre>
+
+    {% else %}
+        <pre>
+<code class="line-numbers language-python">
+if code == None:
+    print("No code to show :(")
+else:
+     print(code)
+</code>
+        </pre>
+
+    {% endif %}
+
+    {% with text_area_placeholder="Type here your code for correction :)" view_url="correction" %}
+        {% include "code_form.html" %}
+    {% endwith %}
+
+
+{% endblock %}

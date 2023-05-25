@@ -1,0 +1,19 @@
+<h2 class="text-center text-capitalize">Login</h2>
+<div class="col-md-6 offset-md-3 mt-5">
+    <form action="{% url 'signin' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Your username">
+        </div>
+        <div class="form-group mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Your password">
+        </div>
+        <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+
+    <div class="text-center">
+        Don't have a login? register <a class="link-secondary" href="{% url 'signup' %}">here :)</a>
+    </div>
+</div>
