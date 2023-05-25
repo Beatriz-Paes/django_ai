@@ -1,4 +1,4 @@
-# Django AI
+# 🐾 Django AI
 
 Django AI is a web application that uses Python, Django and connects to OpenAI, creator of ChatGPT, thus being able to
 send code snippets for correction, instructions for creating code, and requesting general topic questions. The project
@@ -83,7 +83,7 @@ If all goes well, you can access the links below:
 ## 🖼️ Visualization
 
 How you should see it in your browser:
-Img aqui!
+![django_ia](https://github.com/Beatriz-Paes/django_ai/assets/59239202/69e1afa2-9dcb-45d7-b6ae-cb078906bdd9)
 
 ## 🛠️ Built with
 
