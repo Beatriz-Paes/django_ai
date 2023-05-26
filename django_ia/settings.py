@@ -133,6 +133,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "webapp/static/"),
 ]
 
+CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = ["https://djangoai-production.up.railway.app/"]
 
 # Default primary key field type

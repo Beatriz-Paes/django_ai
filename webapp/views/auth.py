@@ -1,12 +1,10 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
-from django.views.decorators.csrf import csrf_exempt
 
 from webapp.forms import SignUpForm
 
 
-@csrf_exempt
 def signin(request):
     if request.method == "POST":
         username = request.POST.get("username")
@@ -29,7 +27,6 @@ def signout(request):
     return redirect("signin")
 
 
-@csrf_exempt
 def signup(request):
     params = {
         "view": {
