@@ -133,6 +133,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "webapp/static/"),
 ]
 
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = ["https://djangoai-production.up.railway.app/"]
 
